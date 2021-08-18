@@ -1,0 +1,99 @@
+@media screen and (min-width: 1000px) {
+  #introduction {
+    width: 100vw;
+
+    padding: 50px $padding-x;
+    padding-bottom: 175px;
+    .masking {
+      background-image: url("../../assets/images/global_map_mask.svg");
+      background-size: contain;
+      background-position: bottom;
+      background-repeat: no-repeat;
+      padding: 0px 30px 65px 30px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      position: relative;
+      &::before {
+        position: absolute;
+        content: "";
+        width: 500px;
+        height: 500px;
+        background-image: url("../../assets/images/Introduction_Decoration.png");
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        right: 0px;
+        top: 50px;
+        z-index: -1;
+      }
+      &::after {
+        position: absolute;
+        content: "";
+        width: 500px;
+        height: 500px;
+        background-image: url("../../assets/images/Introduction_Decoration.png");
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        left: 0px;
+        bottom: -125px;
+        transform: rotate(180deg);
+        z-index: -1;
+      }
+      .image {
+        flex-basis: 50%;
+        img {
+          width: 100%;
+        }
+      }
+      .caption {
+        flex-basis: 50%;
+        padding-bottom: 48px;
+        p.caption-label {
+          font-size: 12px;
+          color: $caption-label;
+          font-weight: 700;
+          .icons {
+            margin-left: 10px;
+            svg {
+              margin-right: 10px;
+            }
+          }
+        }
+        h1.caption-heading {
+          font-size: 40px;
+          color: $light-gray;
+          font-weight: 800;
+          span.yellow {
+            color: $yellow-1;
+          }
+        }
+        p.caption-paragraph {
+          font-size: 14px;
+          color: $white;
+          font-weight: 400;
+          margin-top: 8px;
+          width: 85%;
+        }
+        button.caption-button {
+          padding: 10px 24px;
+          border: none;
+          border-radius: 8px;
+          font-size: 14px;
+          background: linear-gradient(
+            138.35deg,
+            $light-gray -7.52%,
+            $purple-4 116.99%
+          );
+          margin-top: 24px;
+          cursor: pointer;
+          transition: 0.3s;
+          &:hover {
+            transform: scale(1.075);
+          }
+        }
+      }
+    }
+  }
+}

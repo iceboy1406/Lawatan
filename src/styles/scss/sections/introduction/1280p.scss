@@ -1,0 +1,37 @@
+@media screen and (min-width: 1200px) {
+  #introduction {
+    padding: 50px $padding-x;
+    padding-bottom: 175px;
+
+    .masking {
+      padding: 0px 30px 65px 30px;
+      &::after {
+        bottom: -150px;
+      }
+      .image {
+        flex-basis: 50%;
+        img {
+          width: 100%;
+        }
+      }
+
+      .caption {
+        padding-bottom: 56px;
+        p.caption-label {
+          font-size: 18px;
+        }
+        h1.caption-heading {
+          font-size: 50px;
+        }
+        p.caption-paragraph {
+          font-size: 20px;
+        }
+        button.caption-button {
+          padding: 15px 32px;
+          border-radius: 8px;
+          margin-top: 32px;
+        }
+      }
+    }
+  }
+}

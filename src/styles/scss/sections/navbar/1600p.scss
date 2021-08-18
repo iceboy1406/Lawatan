@@ -1,0 +1,28 @@
+@media screen and (min-width: 1550px) {
+  nav#navbar {
+    padding: 18px $padding-x-1600p;
+    .nav-brand svg {
+      height: 62.5px;
+    }
+    .link-list {
+      display: flex;
+      align-items: center;
+      a.nav-link {
+        font-size: 22px;
+        margin-right: 32px;
+      }
+    }
+    .util-list {
+      a.navigation-button {
+        padding: 12px 28px;
+        font-size: 22px;
+        &.icon {
+          padding: 12px 16px;
+          svg {
+            height: 33px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,110 @@
+@media screen and (min-width: 1000px) {
+  #banner {
+    width: 100vw;
+    min-height: 100vh;
+    background-image: url("../../assets/images/banner_background.png");
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0px $padding-x;
+    padding-top: 50px;
+
+    .caption-label,
+    .caption-heading,
+    .caption-paragraph {
+      max-width: 43vw;
+    }
+    p.caption-label {
+      font-size: 18px;
+      color: $caption-label;
+      font-weight: 700;
+      .icons {
+        margin-left: 10px;
+        svg {
+          margin-right: 10px;
+        }
+      }
+    }
+    h1.caption-heading {
+      font-size: 50px;
+      color: $heading-text;
+      font-weight: 800;
+      span.pink {
+        color: $pink-1;
+      }
+      span.your-word {
+        position: relative;
+      }
+      span.your-word::before {
+        position: absolute;
+        content: "";
+        width: 85px;
+        height: 85px;
+        border-radius: 50%;
+        background-color: $yellow-1;
+        right: -30px;
+        top: -5px;
+        z-index: -1;
+      }
+    }
+    p.caption-paragraph {
+      font-size: 20px;
+      color: $paragraph-text;
+      font-weight: 400;
+      margin-top: 8px;
+    }
+    .search-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px;
+      background-color: $white;
+      max-width: 51.5vw;
+      border-radius: 10px;
+      margin-top: 28px;
+      box-shadow: 0px 109px 324px rgba(179, 173, 190, 0.07),
+        0px 45.5376px 135.359px rgba(179, 173, 190, 0.0503198),
+        0px 24.3466px 72.3696px rgba(179, 173, 190, 0.0417275),
+        0px 13.6485px 40.5698px rgba(179, 173, 190, 0.035),
+        0px 7.24861px 21.5463px rgba(179, 173, 190, 0.0282725),
+        0px 3.01631px 8.96591px rgba(179, 173, 190, 0.0196802);
+      svg {
+        margin-left: 24px;
+        width: 26px;
+      }
+      input.search-input {
+        border: none;
+        background-color: transparent;
+        display: block;
+        font-size: 18px;
+        width: 100%;
+        margin-left: 24px;
+        margin-right: 8px;
+        color: $heading-text;
+
+        &:focus {
+          outline: none;
+        }
+      }
+      button.search-button {
+        padding: 12px 40px;
+        border: none;
+        border-radius: 10px;
+        background: linear-gradient(
+          180deg,
+          $purple-3 -11.19%,
+          $purple-1 150.75%
+        );
+        color: $white;
+        font-size: 18px;
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover {
+          transform: scale(1.075);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+@media screen and (min-width: 1000px) {
+  .section-header {
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px $padding-x;
+    p.caption-label {
+      font-size: 16px;
+      color: $caption-label;
+      font-weight: 700;
+      .icons {
+        margin-left: 10px;
+        svg {
+          margin-right: 10px;
+          height: 22px;
+        }
+      }
+    }
+    h1.caption-heading {
+      font-size: 40px;
+      color: $heading-text;
+      font-weight: 800;
+    }
+    p.caption-paragraph {
+      font-size: 18px;
+      color: $paragraph-text;
+      font-weight: 400;
+      margin-top: 8px;
+    }
+    .see-more-button {
+      text-decoration: none;
+      display: block;
+      cursor: pointer;
+      font-size: 20px;
+      padding: 12px 35px;
+      color: $pink-1;
+      background-color: $pink-2;
+      border-radius: 100px;
+      font-weight: 600;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+$pink-1: #ff6ac3;
+$pink-2: #ffeef9;
+$purple-1: #8668ff;
+$purple-2: #a97eff;
+$purple-3: #cbb0ff;
+$purple-4: #dbc9ff;
+$white: #ffffff;
+$light-gray: #faf9fc;
+$light-blue: #c5e2ff;
+$nav-link: #625776;
+$caption-label: #a39ab7;
+$heading-text: #685c80;
+$paragraph-text: #a29ab0;
+$destination-name: #787184;
+$arrow-container: #f4f1f9;
+$yellow-1: #ffe249;
+$orange-1: #ffdc26;
+$padding-x: 60px;
+$padding-x-1600p: 80px;
+$padding-x-1920p: 100px;
+
+body {
+  background-color: $light-gray;
+  overflow-x: hidden;
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $heading-text;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins;
+  scroll-behavior: smooth;
+}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+@import "./sections/navbar/index.scss";
+@import "./sections/banner/index.scss";
+@import "./sections/introduction/index.scss";
+@import "./sections/destination/index.scss";
+@import "./components/section_header/index.scss";
+@import "./components/destination_list_item/index.scss";
