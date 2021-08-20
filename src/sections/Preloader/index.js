@@ -6,7 +6,6 @@ function Preloader() {
   }, []);
   const preloadingHandling = () => {
     document.documentElement.scrollTo(0, 0);
-    document.body.style = "height: 100vh; overflow:hidden";
   };
   return (
     <div id='preloader'>
