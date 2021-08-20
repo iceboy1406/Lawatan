@@ -12,6 +12,7 @@ function Footer() {
     <footer>
       <div className='about'>
         <a
+          href='#ha'
           onClick={(e) => {
             e.preventDefault();
             window.scrollTo(0, 0);
@@ -26,15 +27,51 @@ function Footer() {
       <div className='link-group'>
         <div className='link-list'>
           <h1>About</h1>
-          <a>About</a>
-          <a>Feature</a>
-          <a>News</a>
+          <a
+            href='#ha'
+            onClick={(e) => {
+              e.preventDefault();
+            }}>
+            About
+          </a>
+          <a
+            href='#ha'
+            onClick={(e) => {
+              e.preventDefault();
+            }}>
+            Feature
+          </a>
+          <a
+            href='#ha'
+            onClick={(e) => {
+              e.preventDefault();
+            }}>
+            News
+          </a>
         </div>
         <div className='link-list'>
           <h1>Support</h1>
-          <a>Account</a>
-          <a>Contact</a>
-          <a>Privacy</a>
+          <a
+            href='#ha'
+            onClick={(e) => {
+              e.preventDefault();
+            }}>
+            Account
+          </a>
+          <a
+            href='#ha'
+            onClick={(e) => {
+              e.preventDefault();
+            }}>
+            Contact
+          </a>
+          <a
+            href='#ha'
+            onClick={(e) => {
+              e.preventDefault();
+            }}>
+            Privacy
+          </a>
         </div>
       </div>
       <div className='media-social'>
