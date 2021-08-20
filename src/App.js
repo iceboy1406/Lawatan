@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "./sections/Navbar";
 import Banner from "./sections/Banner";
 import Introduction from "./sections/Introduction";
@@ -8,9 +8,17 @@ import Testimonial from "./sections/Testimonial";
 import "./styles/css/index.css";
 import ExploreNow from "./sections/ExploreNow";
 import Footer from "./sections/Footer";
+import Preloader from "./sections/Preloader";
 function App() {
+  useEffect(() => {
+    setTimeout(() => {
+      document.body.style = "";
+      document.querySelector("#preloader").style = "display:none";
+    }, 3000);
+  }, []);
   return (
     <>
+      <Preloader />
       <Navbar />
       <Banner />
       <Introduction />

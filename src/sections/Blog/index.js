@@ -1,11 +1,11 @@
 import React from "react";
 import BlogPreview from "../../components/BlogPreview";
 import SectionHeader from "../../components/SectionHeader";
-import BlogImage1 from "../../assets/images/blog_image_1.png";
-import BlogImage2 from "../../assets/images/blog_image_2.png";
-import BlogImage3 from "../../assets/images/blog_image_3.png";
-import BlogImage4 from "../../assets/images/blog_image_4.png";
-import BlogImage5 from "../../assets/images/blog_image_5.png";
+import BlogImage1 from "../../assets/images/blog_image_1.webp";
+import BlogImage2 from "../../assets/images/blog_image_2.webp";
+import BlogImage3 from "../../assets/images/blog_image_3.webp";
+import BlogImage4 from "../../assets/images/blog_image_4.webp";
+import BlogImage5 from "../../assets/images/blog_image_5.webp";
 function Blog() {
   const blogs = [
     {

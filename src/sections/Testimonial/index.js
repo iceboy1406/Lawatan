@@ -1,9 +1,9 @@
 import React from "react";
 import SectionHeader from "../../components/SectionHeader";
-import TestimonialImage from "../../assets/images/testimonial_image.png";
+import TestimonialImage from "../../assets/images/testimonial_image.webp";
 import TestimonialItem from "../../components/TestimonialItem";
-import PhotoProfile1 from "../../assets/images/photo_profile_1.png";
-import PhotoProfile2 from "../../assets/images/photo_profile_2.png";
+import PhotoProfile1 from "../../assets/images/photo_profile_1.webp";
+import PhotoProfile2 from "../../assets/images/photo_profile_2.webp";
 function Testimonial() {
   return (
     <section id='testimonial'>

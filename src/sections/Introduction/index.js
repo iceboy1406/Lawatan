@@ -1,5 +1,5 @@
 import React from "react";
-import IntroductionSectionPhoto from "../../assets/images/Introduction_Section_Photo.png";
+import IntroductionSectionPhoto from "../../assets/images/Introduction_Section_Photo.webp";
 function Introduction() {
   return (
     <section id='introduction'>
@@ -20,7 +20,7 @@ function Introduction() {
           <button className='caption-button'>Read more</button>
         </div>
       </div>
-    </section>
+    </section> 
   );
 }
 

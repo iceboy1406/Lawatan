@@ -1,10 +1,10 @@
 import React, { useEffect, useState, useRef } from "react";
 import DestinationListItem from "../../components/DestinationListItem";
 import SectionHeader from "../../components/SectionHeader";
-import DestinationImage1 from "../../assets/images/destination_image_1.png";
-import DestinationImage2 from "../../assets/images/destination_image_2.png";
-import DestinationImage3 from "../../assets/images/destination_image_3.png";
-import DestinationImage4 from "../../assets/images/destination_image_4.png";
+import DestinationImage1 from "../../assets/images/destination_image_1.webp";
+import DestinationImage2 from "../../assets/images/destination_image_2.webp";
+import DestinationImage3 from "../../assets/images/destination_image_3.webp";
+import DestinationImage4 from "../../assets/images/destination_image_4.webp";
 function Destination() {
   const destinations = [
     {

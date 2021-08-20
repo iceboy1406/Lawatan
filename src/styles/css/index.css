@@ -2347,7 +2347,7 @@ button {
   #banner {
     width: 100vw;
     min-height: 100vh;
-    background-image: url("../../assets/images/banner_background.png");
+    background-image: url("../../assets/images/banner_background.webp");
     background-size: cover;
     background-position: center center;
     display: flex;
@@ -2879,7 +2879,7 @@ button {
     content: "";
     width: 500px;
     height: 500px;
-    background-image: url("../../assets/images/Introduction_Decoration.png");
+    background-image: url("../../assets/images/Introduction_Decoration.webp");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -2892,7 +2892,7 @@ button {
     content: "";
     width: 500px;
     height: 500px;
-    background-image: url("../../assets/images/Introduction_Decoration.png");
+    background-image: url("../../assets/images/Introduction_Decoration.webp");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -3676,7 +3676,7 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(152.03deg, rgba(203, 176, 255, 0.9) 18.75%, rgba(169, 126, 255, 0.9) 132.08%), url("../../assets/images/explore_bg_image.png") no-repeat center center;
+    background: linear-gradient(152.03deg, rgba(203, 176, 255, 0.9) 18.75%, rgba(169, 126, 255, 0.9) 132.08%), url("../../assets/images/explore_bg_image.webp") no-repeat center center;
     background-size: cover;
   }
   section#explore-now .card h1 {
@@ -4435,6 +4435,82 @@ button {
     width: 32px;
     height: 32px;
   }
+}
+@keyframes preloader-animation-child3 {
+  0% {
+    opacity: 1;
+    transform: translate(0 0);
+  }
+  49.99% {
+    opacity: 1;
+    transform: translate(80px, 0);
+  }
+  50% {
+    opacity: 0;
+    transform: translate(80px, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0, 0);
+  }
+}
+@keyframes preloader-animation {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(80px, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+.preloader-container div {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.preloader-container div:nth-child(1) {
+  background: #ff6ac3;
+  animation: preloader-animation 1.7543859649s linear infinite;
+  animation-delay: -0.8771929825s;
+}
+
+.preloader-container div:nth-child(2) {
+  background: #8668ff;
+  animation: preloader-animation 1.7543859649s linear infinite;
+  animation-delay: 0s;
+}
+
+.preloader-container div:nth-child(3) {
+  background: #ff6ac3;
+  animation: preloader-animation-child3 1.7543859649s linear infinite;
+  animation-delay: -0.8771929825s;
+}
+
+#preloader {
+  position: absolute;
+  z-index: 9999;
+  background-color: #514270;
+}
+
+.preloader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  transform: translateZ(0) scale(1);
+  backface-visibility: hidden;
+  transform-origin: 0 0;
+  /* see note above */
+}
+
+preloader-container div {
+  box-sizing: content-box;
 }
 
 /*# sourceMappingURL=index.css.map */
