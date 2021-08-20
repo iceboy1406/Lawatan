@@ -2626,7 +2626,7 @@ button {
     background-color: #514270;
     padding: 24px;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-between;
     position: relative;
     flex-direction: column;
@@ -2844,6 +2844,50 @@ button {
   }
   #introduction .masking .caption p.caption-paragraph {
     font-size: 20px;
+    margin-top: 8px;
+    width: 80%;
+  }
+  #introduction .masking .caption button.caption-button {
+    padding: 16px 24px;
+    border-radius: 8px;
+    font-size: 20px;
+    margin-top: 24px;
+  }
+  #introduction .masking .caption button.caption-button:hover {
+    transform: scale(1.0075);
+  }
+}
+@media screen and (min-width: 800px) and (max-width: 999px) {
+  #introduction {
+    width: 100vw;
+    padding: 24px 40px;
+  }
+  #introduction .masking {
+    background-color: #514270;
+    padding: 36px;
+    border-radius: 30px;
+  }
+  #introduction .masking .image {
+    flex-basis: 100%;
+  }
+  #introduction .masking .image img {
+    width: 100%;
+  }
+  #introduction .masking .caption {
+    flex-basis: 100%;
+    padding: 24px 0px;
+  }
+  #introduction .masking .caption p.caption-label {
+    font-size: 22px;
+  }
+  #introduction .masking .caption h1.caption-heading {
+    font-size: 55px;
+  }
+  #introduction .masking .caption h1.caption-heading span.yellow {
+    color: #ffe249;
+  }
+  #introduction .masking .caption p.caption-paragraph {
+    font-size: 22px;
     margin-top: 8px;
     width: 80%;
   }
