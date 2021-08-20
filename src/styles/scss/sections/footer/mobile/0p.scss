@@ -3,6 +3,9 @@
     padding: 45px $padding-x-mobile;
     background-color: $dark-purple;
     margin-top: 45px;
+    a {
+      text-decoration: none;
+    }
     .about {
       a {
         svg {

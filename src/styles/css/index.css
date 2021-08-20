@@ -3907,6 +3907,9 @@ button {
     background-color: #514270;
     margin-top: 45px;
   }
+  footer a {
+    text-decoration: none;
+  }
   footer .about a svg {
     width: 165px;
   }
