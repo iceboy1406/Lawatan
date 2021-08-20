@@ -1,12 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 function Preloader() {
-  useEffect(() => {
-    preloadingHandling();
-  }, []);
-  const preloadingHandling = () => {
-    document.documentElement.scrollTo(0, 0);
-  };
   return (
     <div id='preloader'>
       <div className='preloader-container'>

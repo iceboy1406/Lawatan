@@ -4536,7 +4536,7 @@ button {
 }
 
 #preloader {
-  position: absolute;
+  position: fixed;
   z-index: 9999;
   background-color: #514270;
 }
