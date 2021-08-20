@@ -1,0 +1,47 @@
+@media screen and (min-width: 700px) and (max-width: 999px) {
+  #banner {
+    padding: 0px $padding-x-tablet;
+    padding-top: 50px;
+    p.caption-label {
+      font-size: 24px;
+      .icons {
+        svg {
+          width: 22px;
+        }
+      }
+    }
+    h1.caption-heading {
+      font-size: 62.5px;
+      span.your-word::before {
+        width: 90px;
+        height: 90px;
+        right: -20px;
+        top: 0px;
+      }
+    }
+    p.caption-paragraph {
+      font-size: 24px;
+    }
+    .search-bar {
+      padding: 16px;
+      border-radius: 10px;
+      margin-top: 28px;
+      .input-group {
+        margin: 8px 0px;
+        svg {
+          margin-left: 8px;
+          width: 22px;
+        }
+        input.search-input {
+          font-size: 22px;
+          margin-left: 18px;
+        }
+      }
+      button.search-button {
+        padding: 14px 40px;
+        border-radius: 8px;
+        font-size: 16px;
+      }
+    }
+  }
+}

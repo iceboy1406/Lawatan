@@ -1,0 +1,38 @@
+@media screen and (min-width: 0px) {
+  section#explore-now {
+    padding: 16px $padding-x-mobile;
+    .card {
+      width: 100%;
+      padding: 20px;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: linear-gradient(
+          152.03deg,
+          rgba(203, 176, 255, 0.9) 18.75%,
+          rgba(169, 126, 255, 0.9) 132.08%
+        ),
+        url("../../assets/images/explore_bg_image.png") no-repeat center center;
+      background-size: cover;
+      h1 {
+        font-size: 20px;
+        color: $white;
+        font-weight: 600;
+      }
+      button {
+        padding: 10px 24px;
+        border: none;
+        border-radius: 8px;
+        background: linear-gradient(141.78deg, #faf9fc 12.13%, #ede2ff 104.09%);
+        color: $heading-text;
+        font-size: 14px;
+        width: 100%;
+        margin-top: 12px;
+        &:hover {
+          transform: scale(1.0075);
+        }
+      }
+    }
+  }
+}

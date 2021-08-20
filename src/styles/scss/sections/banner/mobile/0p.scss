@@ -1,0 +1,117 @@
+@media screen and (min-width: 0px) and (max-width: 999px) {
+  #banner {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0px $padding-x-mobile;
+    padding-top: 50px;
+
+    .caption-label,
+    .caption-heading,
+    .caption-paragraph {
+      max-width: 100vw;
+    }
+    p.caption-label {
+      font-size: 16px;
+      color: $caption-label;
+      font-weight: 700;
+      .icons {
+        margin-left: 10px;
+        svg {
+          margin-right: 10px;
+          width: 18px;
+        }
+      }
+    }
+    h1.caption-heading {
+      font-size: 36px;
+      color: $heading-text;
+      font-weight: 800;
+      span.pink {
+        color: $pink-1;
+      }
+      span.your-word {
+        position: relative;
+      }
+      span.your-word::before {
+        position: absolute;
+        content: "";
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: $yellow-1;
+        right: -10px;
+        top: 0px;
+        z-index: -1;
+      }
+    }
+    p.caption-paragraph {
+      font-size: 14px;
+      color: $paragraph-text;
+      font-weight: 400;
+      margin-top: 8px;
+    }
+    .search-bar {
+      display: flex;
+      justify-content: space-between;
+
+      align-items: center;
+      flex-direction: column;
+      padding: 12px;
+      background-color: $white;
+      max-width: 100vw;
+      border-radius: 8px;
+      margin-top: 28px;
+      box-shadow: 0px 109px 324px rgba(179, 173, 190, 0.07),
+        0px 45.5376px 135.359px rgba(179, 173, 190, 0.0503198),
+        0px 24.3466px 72.3696px rgba(179, 173, 190, 0.0417275),
+        0px 13.6485px 40.5698px rgba(179, 173, 190, 0.035),
+        0px 7.24861px 21.5463px rgba(179, 173, 190, 0.0282725),
+        0px 3.01631px 8.96591px rgba(179, 173, 190, 0.0196802);
+      .input-group {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin: 8px 0px;
+        svg {
+          margin-left: 8px;
+          width: 18px;
+        }
+        input.search-input {
+          border: none;
+          background-color: transparent;
+          display: block;
+          font-size: 16px;
+          width: 100%;
+          margin-left: 8px;
+          color: $heading-text;
+
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+      button.search-button {
+        width: 100%;
+        margin-top: 4px;
+        padding: 10px 40px;
+        border: none;
+        border-radius: 8px;
+        background: linear-gradient(
+          180deg,
+          $purple-3 -11.19%,
+          $purple-1 150.75%
+        );
+        color: $white;
+        font-size: 14px;
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover {
+          transform: scale(1.009);
+        }
+      }
+    }
+  }
+}

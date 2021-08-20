@@ -1,83 +1,145 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { NavBrand, PeopleIcon } from "../../components/icons";
 function Navbar() {
+  const navBarRef = useRef(null);
+  const [isShowSidebar, setIsShowSidebar] = useState(false);
   useEffect(() => {
-    toggleNav();
+    scrolledNav();
+  }, [isShowSidebar]);
+  useEffect(() => {
+    scrollHandler();
+    touchMoveHandler();
   }, []);
-  const toggleNav = () => {
-    const navbar = document.querySelector("nav#navbar");
-    window.addEventListener("scroll", () => {
-      if (window.scrollY >= 115) {
-        navbar.classList.add("scrolled");
-      } else {
-        navbar.classList.remove("scrolled");
+
+  const touchMoveHandler = () => {
+    document.body.addEventListener("touchmove", (touchMoveEvent) => {
+      if (
+        touchMoveEvent.changedTouches[0].clientX <= 50 &&
+        touchMoveEvent.changedTouches[0].clientX >= 0
+      ) {
+        document.querySelector("nav").classList.remove("scrolled");
+        document.body.style = "height: 100vh; overflow: hidden";
+        setIsShowSidebar(true);
       }
     });
   };
+  const scrolledNav = () => {
+    window.addEventListener("scroll", () => {
+      if (
+        document
+          .querySelector(".nav-item")
+          .className.split(" ")
+          .find((x) => x === "show") !== "show"
+      ) {
+        if (window.scrollY >= 115) {
+          navBarRef.current.classList.add("scrolled");
+        } else {
+          navBarRef.current.classList.remove("scrolled");
+        }
+      }
+    });
+  };
+  const scrollHandler = () => {
+    const navLinks = document.querySelectorAll(".nav-link");
+    for (let navLink of navLinks) {
+      // Handle Link Active When scroll on Section with id == link href
+      window.addEventListener("scroll", () => {
+        let sectionId = navLink.getAttribute("href");
+        let section = document.querySelector(`section${sectionId}`);
+        if (section !== null) {
+          if (
+            window.scrollY >=
+              section.offsetTop - navBarRef.current.offsetHeight &&
+            window.scrollY <
+              section.offsetTop +
+                section.offsetHeight -
+                navBarRef.current.offsetHeight
+          ) {
+            navLink.classList.add("active");
+          } else {
+            navLink.classList.remove("active");
+          }
+        }
+      });
+      // Handle Scroll into href
+      navLink.addEventListener("click", (e) => {
+        e.preventDefault();
+        let sectionId = navLink.getAttribute("href");
+        let section = document.querySelector(`section${sectionId}`);
+        document.querySelector("nav").setAttribute("class", "");
+        if (section !== null) {
+          document.documentElement.scrollTo(
+            0,
+            section.offsetTop - navBarRef.current.offsetHeight
+          );
+        }
+      });
+    }
+  };
   return (
     <>
-      <nav id='navbar'>
-        <a href='#banner' className='nav-brand'>
-          <NavBrandSVG />
+      <nav id='navbar' ref={navBarRef}>
+        <button
+          className={`hamburger hamburger--spin ${
+            isShowSidebar ? "is-active" : ""
+          }`}
+          type='button'
+          onClick={() => {
+            document.querySelector("nav").classList.remove("scrolled");
+            document.body.style = "height: 100vh; overflow: hidden";
+            setIsShowSidebar(true);
+          }}>
+          <span className='hamburger-box'>
+            <span className='hamburger-inner'></span>
+          </span>
+        </button>
+        <a
+          href='#banner'
+          className='nav-brand'
+          onClick={(e) => {
+            e.preventDefault();
+            window.scrollTo(0, 0);
+          }}>
+          <NavBrand />
         </a>
-        <div className='link-list'>
-          <a href='#introduction' className='nav-link'>
-            About
-          </a>
-          <a href='#destination' className='nav-link'>
-            Destination
-          </a>
-          <a href='#blog' className='nav-link'>
-            Blog
-          </a>
-          <a href='#testimonial' className='nav-link'>
-            Testimonial
-          </a>
-        </div>
-        <div className='util-list'>
-          <a href='#profile' className='navigation-button icon'>
-            <ProfileIconSVG />
-          </a>
-          <a href='#signup' className='navigation-button'>
-            Sign Up
-          </a>
+        <div className={`nav-item ${isShowSidebar ? "show" : ""}`}>
+          <div className='link-list'>
+            <a href='#banner' className='nav-link active'>
+              Home
+            </a>
+            <a href='#introduction' className='nav-link'>
+              About
+            </a>
+            <a href='#destination' className='nav-link'>
+              Destination
+            </a>
+            <a href='#blog' className='nav-link'>
+              Blog
+            </a>
+            <a href='#testimonial' className='nav-link'>
+              Testimonial
+            </a>
+          </div>
+          <div
+            className='hide-sidebar'
+            onClick={() => {
+              setIsShowSidebar(false);
+              document.querySelector("nav").classList.add("scrolled");
+              document.querySelector(".hamburger").style = "";
+              document.body.style = "";
+            }}></div>
+          <div className='util-list'>
+            <a href='#profile' className='navigation-button icon'>
+              <PeopleIcon />
+            </a>
+            <a href='#signup' className='navigation-button'>
+              Sign Up
+            </a>
+          </div>
         </div>
       </nav>
     </>
   );
 }
-function NavBrandSVG() {
-  return (
-    <>
-      <svg
-        width='189'
-        height='62'
-        viewBox='0 0 189 62'
-        fill='none'
-        xmlns='http://www.w3.org/2000/svg'>
-        <path
-          d='M9.32 39.72H18.28V45H2.48V16.92H9.32V39.72ZM20.5825 33.8C20.5825 31.5067 21.0092 29.4933 21.8625 27.76C22.7425 26.0267 23.9292 24.6933 25.4225 23.76C26.9158 22.8267 28.5825 22.36 30.4225 22.36C31.9958 22.36 33.3692 22.68 34.5425 23.32C35.7425 23.96 36.6625 24.8 37.3025 25.84V22.68H44.1425V45H37.3025V41.84C36.6358 42.88 35.7025 43.72 34.5025 44.36C33.3292 45 31.9558 45.32 30.3825 45.32C28.5692 45.32 26.9158 44.8533 25.4225 43.92C23.9292 42.96 22.7425 41.6133 21.8625 39.88C21.0092 38.12 20.5825 36.0933 20.5825 33.8ZM37.3025 33.84C37.3025 32.1333 36.8225 30.7867 35.8625 29.8C34.9292 28.8133 33.7825 28.32 32.4225 28.32C31.0625 28.32 29.9025 28.8133 28.9425 29.8C28.0092 30.76 27.5425 32.0933 27.5425 33.8C27.5425 35.5067 28.0092 36.8667 28.9425 37.88C29.9025 38.8667 31.0625 39.36 32.4225 39.36C33.7825 39.36 34.9292 38.8667 35.8625 37.88C36.8225 36.8933 37.3025 35.5467 37.3025 33.84ZM81.5309 22.68L75.4909 45H67.9309L64.4109 30.52L60.7709 45H53.2509L47.1709 22.68H54.0109L57.1709 38.64L60.9309 22.68H68.1709L71.9709 38.56L75.0909 22.68H81.5309ZM83.1794 33.8C83.1794 31.5067 83.606 29.4933 84.4594 27.76C85.3394 26.0267 86.526 24.6933 88.0194 23.76C89.5127 22.8267 91.1794 22.36 93.0194 22.36C94.5927 22.36 95.966 22.68 97.1394 23.32C98.3394 23.96 99.2594 24.8 99.8994 25.84V22.68H106.739V45H99.8994V41.84C99.2327 42.88 98.2994 43.72 97.0994 44.36C95.926 45 94.5527 45.32 92.9794 45.32C91.166 45.32 89.5127 44.8533 88.0194 43.92C86.526 42.96 85.3394 41.6133 84.4594 39.88C83.606 38.12 83.1794 36.0933 83.1794 33.8ZM99.8994 33.84C99.8994 32.1333 99.4194 30.7867 98.4594 29.8C97.526 28.8133 96.3794 28.32 95.0194 28.32C93.6594 28.32 92.4994 28.8133 91.5394 29.8C90.606 30.76 90.1394 32.0933 90.1394 33.8C90.1394 35.5067 90.606 36.8667 91.5394 37.88C92.4994 38.8667 93.6594 39.36 95.0194 39.36C96.3794 39.36 97.526 38.8667 98.4594 37.88C99.4194 36.8933 99.8994 35.5467 99.8994 33.84ZM124.528 39.2V45H121.048C118.568 45 116.634 44.4 115.248 43.2C113.861 41.9733 113.168 39.9867 113.168 37.24V28.36H110.448V22.68H113.168V17.24H120.008V22.68H124.488V28.36H120.008V37.32C120.008 37.9867 120.168 38.4667 120.488 38.76C120.808 39.0533 121.341 39.2 122.088 39.2H124.528ZM177.844 22.44C180.457 22.44 182.537 23.2933 184.084 25C185.657 26.68 186.444 29 186.444 31.96V45H179.644V32.88C179.644 31.3867 179.257 30.2267 178.484 29.4C177.711 28.5733 176.671 28.16 175.364 28.16C174.057 28.16 173.017 28.5733 172.244 29.4C171.471 30.2267 171.084 31.3867 171.084 32.88V45H164.244V22.68H171.084V25.64C171.777 24.6533 172.711 23.88 173.884 23.32C175.057 22.7333 176.377 22.44 177.844 22.44Z'
-          fill='#685C80'
-        />
-        <circle cx='144' cy='30' r='15' fill='#FFE249' />
-      </svg>
-    </>
-  );
-}
-function ProfileIconSVG() {
-  return (
-    <svg
-      width='25'
-      height='27'
-      viewBox='0 0 25 27'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'>
-      <path
-        fillRule='evenodd'
-        clipRule='evenodd'
-        d='M12.5 10.8C13.9208 10.8 15.2834 10.2311 16.2881 9.21838C17.2927 8.20568 17.8571 6.83217 17.8571 5.4C17.8571 3.96783 17.2927 2.59432 16.2881 1.58162C15.2834 0.568927 13.9208 0 12.5 0C11.0792 0 9.71659 0.568927 8.71193 1.58162C7.70727 2.59432 7.14286 3.96783 7.14286 5.4C7.14286 6.83217 7.70727 8.20568 8.71193 9.21838C9.71659 10.2311 11.0792 10.8 12.5 10.8ZM0 27C-2.44606e-08 25.3453 0.323322 23.7069 0.951506 22.1782C1.57969 20.6495 2.50043 19.2605 3.66116 18.0905C4.8219 16.9204 6.19989 15.9923 7.71646 15.3591C9.23303 14.7259 10.8585 14.4 12.5 14.4C14.1415 14.4 15.767 14.7259 17.2835 15.3591C18.8001 15.9923 20.1781 16.9204 21.3388 18.0905C22.4996 19.2605 23.4203 20.6495 24.0485 22.1782C24.6767 23.7069 25 25.3453 25 27H0Z'
-        fill='#625776'
-      />
-    </svg>
-  );
-}
+
 export default Navbar;

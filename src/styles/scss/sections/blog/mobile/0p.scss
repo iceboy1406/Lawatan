@@ -1,0 +1,14 @@
+@media screen and (min-width: 0px) and (max-width: 999px) {
+  #blog {
+    padding: 45px 0px;
+    .blog-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(5, 1fr);
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
+      padding: 50px $padding-x-mobile;
+      grid-row-gap: 16px;
+    }
+  }
+}

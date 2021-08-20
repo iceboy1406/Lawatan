@@ -1,0 +1,15 @@
+@media screen and (min-width: 800px) and (max-width: 999px) {
+  #testimonial {
+    padding: 45px 0px;
+    .flex {
+      padding: 8px $padding-x-tablet;
+      .testimonial-image {
+        padding: 24px 0px;
+        width: 70%;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

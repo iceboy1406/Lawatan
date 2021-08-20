@@ -1,0 +1,66 @@
+$image-width: 200px;
+$card-padding: 12px;
+@media screen and (min-width: 0px) and (max-width: 999px) {
+  .destination-list-item {
+    margin-right: 16px;
+    .card {
+      padding: $card-padding;
+      border-radius: 24px;
+      background-color: $white;
+      box-shadow: 0px 72px 401px rgba(139, 131, 153, 0.02),
+        0px 30.0799px 193.574px rgba(139, 131, 153, 0.0143771),
+        0px 16.0821px 109.554px rgba(139, 131, 153, 0.0119221),
+        0px 9.01552px 86.1518px rgba(139, 131, 153, 0.01),
+        0px 4.78807px 75.3514px rgba(139, 131, 153, 0.00807786),
+        0px 1.99242px 50.5451px rgba(139, 131, 153, 0.00562291);
+      width: calc(#{$image-width+ 2 * $card-padding});
+      .image {
+        width: $image-width;
+        height: calc(#{$image-width/1.22});
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+      .flex {
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+        .information {
+          max-width: 80%;
+          p.destination-name {
+            font-size: 22px;
+            color: $destination-name;
+            font-weight: 600;
+            margin-top: 8px;
+          }
+          p.price {
+            color: $pink-1;
+            font-weight: 600;
+            font-size: 18px;
+            margin-top: 8px;
+          }
+          .rating {
+            margin-top: 4px;
+            svg {
+              width: 16px;
+              height: 16px;
+            }
+          }
+        }
+        a.arrow-container {
+          background-color: $arrow-container;
+          width: 45px;
+          height: 45px;
+          border-radius: 12px;
+          align-self: flex-end;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          svg {
+            width: 16px;
+          }
+        }
+      }
+    }
+  }
+}

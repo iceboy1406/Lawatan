@@ -4,6 +4,7 @@ $purple-1: #8668ff;
 $purple-2: #a97eff;
 $purple-3: #cbb0ff;
 $purple-4: #dbc9ff;
+$dark-purple: #514270;
 $white: #ffffff;
 $light-gray: #faf9fc;
 $light-blue: #c5e2ff;
@@ -13,15 +14,24 @@ $heading-text: #685c80;
 $paragraph-text: #a29ab0;
 $destination-name: #787184;
 $arrow-container: #f4f1f9;
+$blog-title: #5a5269;
+$blog-description: #807b8a;
+$blog-like: #938d9e;
+$testimonial-card-bg: #f6f4fa;
+$testimonial-caption: #9b8db5;
+$testimonial-job: #b1aac0;
 $yellow-1: #ffe249;
 $orange-1: #ffdc26;
+$padding-x-mobile: 28px;
+$padding-x-tablet: 40px;
 $padding-x: 60px;
 $padding-x-1600p: 80px;
 $padding-x-1920p: 100px;
-
+$footer-text: #aea7be;
 body {
   background-color: $light-gray;
   overflow-x: hidden;
+  max-width: 100vw;
   &::-webkit-scrollbar {
     width: 5px;
   }
@@ -33,13 +43,34 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Poppins;
+  font-family: Nunito;
   scroll-behavior: smooth;
+  transition: 0.3s;
+}
+@media screen and (max-width: 800px) {
+  a,
+  button {
+    cursor: default !important;
+  }
+}
+@media screen and (min-width: 900px) {
+  a,
+  button {
+    cursor: pointer;
+  }
 }
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap");
+@import "./components/section_header/index.scss";
+@import "./components/destination_list_item/index.scss";
+@import "./components/blog_preview_list_item/index.scss";
+@import "./components/hamburgers/hamburgers.scss";
+@import "./components/testimonial_item/index.scss";
 @import "./sections/navbar/index.scss";
 @import "./sections/banner/index.scss";
 @import "./sections/introduction/index.scss";
 @import "./sections/destination/index.scss";
-@import "./components/section_header/index.scss";
-@import "./components/destination_list_item/index.scss";
+@import "./sections/blog/index.scss";
+@import "./sections/testimonial/index.scss";
+@import "./sections/explorenow/index.scss";
+@import "./sections/footer/index.scss";

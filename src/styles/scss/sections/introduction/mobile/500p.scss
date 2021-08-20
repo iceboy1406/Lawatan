@@ -1,0 +1,44 @@
+@media screen and (min-width: 500px) and (max-width: 999px) {
+  #introduction {
+    width: 100vw;
+    padding: 24px $padding-x-mobile;
+    .masking {
+      background-color: #514270;
+      padding: 24px;
+      border-radius: 25px;
+      .image {
+        flex-basis: 100%;
+        img {
+          width: 100%;
+        }
+      }
+      .caption {
+        flex-basis: 100%;
+        padding: 24px 0px;
+        p.caption-label {
+          font-size: 16px;
+        }
+        h1.caption-heading {
+          font-size: 45px;
+          span.yellow {
+            color: $yellow-1;
+          }
+        }
+        p.caption-paragraph {
+          font-size: 16px;
+          margin-top: 8px;
+          width: 90%;
+        }
+        button.caption-button {
+          padding: 12px 24px;
+          border-radius: 8px;
+          font-size: 16px;
+          margin-top: 24px;
+          &:hover {
+            transform: scale(1.0075);
+          }
+        }
+      }
+    }
+  }
+}

@@ -4,24 +4,26 @@
     .nav-brand svg {
       height: 55px;
     }
-    .link-list {
-      display: flex;
-      align-items: center;
-      a.nav-link {
-        font-size: 20px;
-        margin-right: 28px;
+    .nav-item {
+      .link-list {
+        display: flex;
+        align-items: center;
+        a.nav-link {
+          font-size: 20px;
+          margin-right: 28px;
+        }
       }
-    }
-    .util-list {
-      a.navigation-button {
-        padding: 12px 28px;
-        border-radius: 10px;
-        font-size: 20px;
-        font-weight: 600;
-        &.icon {
-          padding: 12px 15px;
-          svg {
-            height: 30px;
+      .util-list {
+        a.navigation-button {
+          padding: 12px 28px;
+          border-radius: 10px;
+          font-size: 20px;
+          font-weight: 600;
+          &.icon {
+            padding: 12px 15px;
+            svg {
+              height: 30px;
+            }
           }
         }
       }

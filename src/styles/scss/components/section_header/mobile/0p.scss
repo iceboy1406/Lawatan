@@ -1,0 +1,47 @@
+@media screen and (min-width: 0px) and (max-width: 999px) {
+  .section-header {
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 16px $padding-x-mobile;
+    flex-direction: column;
+    p.caption-label {
+      font-size: 18px;
+      color: $caption-label;
+      font-weight: 700;
+      .icons {
+        margin-left: 10px;
+        svg {
+          margin-right: 10px;
+          height: 22px;
+        }
+      }
+    }
+    h1.caption-heading {
+      font-size: 36px;
+      color: $heading-text;
+      font-weight: 800;
+    }
+    p.caption-paragraph {
+      font-size: 16px;
+      color: $paragraph-text;
+      font-weight: 400;
+      margin-top: 8px;
+    }
+    .see-more-button {
+      text-decoration: none;
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 18px;
+      padding: 10px 35px;
+      color: $pink-1;
+      background-color: $pink-2;
+      border-radius: 8px;
+      font-weight: 600;
+      margin-top: 24px;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+@media screen and (min-width: 1200px) {
+  footer {
+    padding: 75px $padding-x;
+    background-color: $dark-purple;
+    margin-top: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    .about {
+      flex-basis: 45%;
+      a {
+        display: flex;
+        svg {
+          width: 245px;
+          height: 60px;
+        }
+      }
+      p {
+        margin-top: 12px;
+        font-size: 28px;
+        width: 95%;
+      }
+    }
+    .link-group {
+      margin-top: 0px;
+      flex-basis: 35%;
+      justify-content: space-around;
+      .link-list {
+        h1 {
+          font-size: 32px;
+          margin-bottom: 16px;
+        }
+        a {
+          font-size: 28px;
+          margin-bottom: 8px;
+        }
+      }
+    }
+    .media-social {
+      margin-top: 0px;
+      h1 {
+        font-size: 32px;
+        margin-bottom: 16px;
+      }
+      a {
+        margin-right: 16px;
+        svg {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+  }
+}

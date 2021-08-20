@@ -1,0 +1,47 @@
+@media screen and (min-width: 500px) {
+  footer {
+    padding: 55px $padding-x-mobile;
+    background-color: $dark-purple;
+    margin-top: 45px;
+    .about {
+      a {
+        svg {
+          width: 175px;
+        }
+      }
+      p {
+        margin-top: 12px;
+        font-size: 20px;
+        width: 90%;
+      }
+    }
+    .link-group {
+      margin-top: 16px;
+      .link-list {
+        margin-right: 24px;
+        h1 {
+          font-size: 24px;
+          margin-bottom: 12px;
+        }
+        a {
+          font-size: 18px;
+          margin-bottom: 8px;
+        }
+      }
+    }
+    .media-social {
+      margin-top: 18px;
+      h1 {
+        font-size: 22px;
+        margin-bottom: 12px;
+      }
+      a {
+        margin-right: 16px;
+        svg {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+}

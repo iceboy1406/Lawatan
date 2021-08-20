@@ -1,0 +1,18 @@
+@media screen and (min-width: 500px) {
+  section#explore-now {
+    padding: 16px $padding-x-mobile;
+    .card {
+      padding: 28px;
+      border-radius: 12px;
+      h1 {
+        font-size: 28px;
+      }
+      button {
+        padding: 14px 28px;
+        border-radius: 8px;
+        margin-top: 14px;
+        font-size: 16px;
+      }
+    }
+  }
+}

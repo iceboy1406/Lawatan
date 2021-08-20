@@ -13,8 +13,9 @@ function Introduction() {
             What is <span className='yellow'>Lawatan?</span>
           </h1>
           <p className='caption-paragraph'>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisi
-            praesent massani faucibus quam pellentesque porta....
+            Founded in 2018, Lawatan is a nonprofit focused on increasing
+            diversity in the world of travel through individual and community
+            empowerment.
           </p>
           <button className='caption-button'>Read more</button>
         </div>

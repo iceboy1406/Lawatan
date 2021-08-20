@@ -1,0 +1,55 @@
+@media screen and (min-width: 0px) {
+  footer {
+    padding: 45px $padding-x-mobile;
+    background-color: $dark-purple;
+    margin-top: 45px;
+    .about {
+      a {
+        svg {
+          width: 165px;
+        }
+      }
+      p {
+        margin-top: 12px;
+        color: $footer-text;
+        font-size: 18px;
+        font-weight: 300;
+      }
+    }
+    .link-group {
+      display: flex;
+      margin-top: 16px;
+      .link-list {
+        display: flex;
+        flex-direction: column;
+        margin-right: 24px;
+        h1 {
+          font-size: 22px;
+          color: $white;
+          margin-bottom: 12px;
+        }
+        a {
+          color: $footer-text;
+          font-size: 16px;
+          font-weight: 300;
+          margin-bottom: 8px;
+        }
+      }
+    }
+    .media-social {
+      margin-top: 16px;
+      h1 {
+        font-size: 22px;
+        color: $white;
+        margin-bottom: 12px;
+      }
+      a {
+        margin-right: 16px;
+        svg {
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+  }
+}

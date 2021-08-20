@@ -1,0 +1,70 @@
+@media screen and (min-width: 0px) and (max-width: 999px) {
+  #introduction {
+    width: 100vw;
+    padding: 24px $padding-x-mobile;
+    .masking {
+      background-color: $dark-purple;
+      padding: 24px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      position: relative;
+      flex-direction: column;
+      border-radius: 25px;
+      .image {
+        flex-basis: 100%;
+        img {
+          width: 100%;
+        }
+      }
+      .caption {
+        flex-basis: 100%;
+        padding: 24px 0px;
+        p.caption-label {
+          font-size: 14px;
+          color: $caption-label;
+          font-weight: 700;
+          .icons {
+            margin-left: 10px;
+            svg {
+              margin-right: 10px;
+            }
+          }
+        }
+        h1.caption-heading {
+          font-size: 40px;
+          color: $light-gray;
+          font-weight: 800;
+          span.yellow {
+            color: $yellow-1;
+          }
+        }
+        p.caption-paragraph {
+          font-size: 14px;
+          color: $white;
+          font-weight: 300;
+          margin-top: 8px;
+        }
+        button.caption-button {
+          width: 100%;
+
+          padding: 10px 24px;
+          border: none;
+          border-radius: 8px;
+          font-size: 14px;
+          background: linear-gradient(
+            138.35deg,
+            $light-gray -7.52%,
+            $purple-4 116.99%
+          );
+          margin-top: 24px;
+          cursor: pointer;
+          transition: 0.3s;
+          &:hover {
+            transform: scale(1.0075);
+          }
+        }
+      }
+    }
+  }
+}

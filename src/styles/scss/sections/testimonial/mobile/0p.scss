@@ -1,0 +1,21 @@
+@media screen and (min-width: 0px) and (max-width: 999px) {
+  #testimonial {
+    padding: 45px 0px;
+    .flex {
+      padding: 8px $padding-x-mobile;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .testimonial-image {
+        display: flex;
+        justify-content: center;
+        padding: 24px 0px;
+        width: 90%;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

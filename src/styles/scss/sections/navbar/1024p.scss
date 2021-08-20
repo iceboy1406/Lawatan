@@ -10,8 +10,9 @@
     width: 100vw;
     z-index: 999;
     transition: 0.6s;
+
     &.scrolled {
-      background-color: transparentize($light-gray, 0.25);
+      background-color: transparentize($light-gray, 0.35);
       backdrop-filter: blur(10px);
       box-shadow: 0px 109px 324px rgba(179, 173, 190, 0.07),
         0px 45.5376px 135.359px rgba(179, 173, 190, 0.0503198),
@@ -20,26 +21,50 @@
         0px 7.24861px 21.5463px rgba(179, 173, 190, 0.0282725),
         0px 3.01631px 8.96591px rgba(179, 173, 190, 0.0196802);
     }
+
     .nav-brand {
       display: flex;
       align-items: center;
     }
+
     .nav-brand svg {
       height: 48px;
       width: unset;
     }
-    .link-list {
+
+    .nav-item {
       display: flex;
       align-items: center;
-      a.nav-link {
-        font-size: 18px;
-        font-weight: 600;
-        color: $nav-link;
-        display: block;
-        margin-right: 24px;
-        text-decoration: none;
+      position: unset;
+
+      .link-list {
+        display: flex;
+        align-items: center;
+
+        a.nav-link {
+          font-size: 18px;
+          font-weight: 600;
+          color: $nav-link;
+          display: block;
+          margin-right: 24px;
+          text-decoration: none;
+          position: relative;
+          &::before {
+            position: absolute;
+            content: "";
+            width: 0%;
+            height: 2px;
+            background-color: #524371;
+            bottom: -5px;
+            transition: 0.3s;
+          }
+          &.active::before {
+            width: 60%;
+          }
+        }
       }
     }
+
     .util-list {
       display: flex;
       align-items: center;
@@ -55,18 +80,25 @@
         margin-left: 18px;
         display: block;
         transition: 0.3s;
+
         &.icon {
           display: flex;
           align-items: center;
           padding: 11px 15px;
+
           svg {
             height: 27px;
           }
         }
+
         &:hover {
           transform: scale(1.075);
         }
       }
     }
+  }
+
+  .hamburger {
+    display: none;
   }
 }
