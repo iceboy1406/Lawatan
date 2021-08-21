@@ -128,14 +128,14 @@ function Navbar() {
               document.querySelector(".hamburger").style = "";
               document.body.style = "";
             }}></div>
-          <div className='util-list'>
-            <a href='#profile' className='navigation-button icon'>
-              <PeopleIcon />
-            </a>
-            <a href='#signup' className='navigation-button'>
-              Sign Up
-            </a>
-          </div>
+        </div>
+        <div className='util-list'>
+          <a href='#profile' className='navigation-button icon'>
+            <PeopleIcon />
+          </a>
+          <a href='#signup' className='navigation-button'>
+            Sign Up
+          </a>
         </div>
       </nav>
     </>

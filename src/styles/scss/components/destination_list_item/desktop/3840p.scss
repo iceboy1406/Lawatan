@@ -1,0 +1,44 @@
+$image-width: 625px;
+$card-padding: 36px;
+@media screen and (min-width: 3800px) {
+  .destination-list-item {
+    margin-right: 24px;
+    .card {
+      padding: $card-padding;
+      width: calc(#{$image-width + $card-padding * 2});
+      border-radius: 40px;
+      .image {
+        width: $image-width;
+        height: calc(#{$image-width / 1.22});
+      }
+      .flex {
+        .information {
+          p.destination-name {
+            font-size: 56px;
+            margin-top: 16px;
+          }
+          p.price {
+            font-size: 48px;
+            margin-top: 16px;
+          }
+          .rating {
+            margin-top: 16px;
+            svg {
+              width: 40px;
+              height: 40px;
+            }
+          }
+        }
+        a.arrow-container {
+          width: 100px;
+          height: 100px;
+          border-radius: 16px;
+          svg {
+            width: 44px;
+            height: 28px;
+          }
+        }
+      }
+    }
+  }
+}

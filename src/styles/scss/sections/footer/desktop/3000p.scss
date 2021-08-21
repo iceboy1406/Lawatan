@@ -1,0 +1,47 @@
+@media screen and (min-width: 3000px) {
+  footer {
+    padding: 100px $padding-x-3000p;
+    .about {
+      flex-basis: 45%;
+      a {
+        svg {
+          width: 325px;
+          height: 95px;
+        }
+      }
+      p {
+        margin-top: 14px;
+        font-size: 44px;
+        width: 95%;
+      }
+    }
+    .link-group {
+      margin-top: 0px;
+      flex-basis: 35%;
+      .link-list {
+        h1 {
+          font-size: 56px;
+          margin-bottom: 18px;
+        }
+        a {
+          font-size: 44px;
+          margin-bottom: 12px;
+        }
+      }
+    }
+    .media-social {
+      margin-top: 0px;
+      h1 {
+        font-size: 56px;
+        margin-bottom: 22px;
+      }
+      a {
+        margin-right: 22px;
+        svg {
+          width: 44px;
+          height: 44px;
+        }
+      }
+    }
+  }
+}

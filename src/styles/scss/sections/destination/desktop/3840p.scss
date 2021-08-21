@@ -1,0 +1,19 @@
+@media screen and (min-width: 3800px) {
+  section#destination {
+    padding: 45px 0px;
+    .destination-list {
+      padding-left: $padding-x-3840p;
+      display: flex;
+      overflow-x: scroll;
+      margin-top: 48px;
+      user-select: none;
+      cursor: grab;
+      &:active {
+        cursor: grabbing;
+      }
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+@media screen and (min-width: 2000px) {
+  .testimonial-item {
+    padding: 24px 0px;
+    &.flex-end {
+      .testimonial-card {
+        border-radius: 20px 20px 0px 20px;
+
+        &::before {
+          clip-path: polygon(0 0, 100% 100%, 100% 0);
+        }
+      }
+      .profile-card {
+        img {
+          margin-right: 0px;
+          margin-left: 18px;
+        }
+      }
+    }
+    .testimonial-card {
+      padding: 32px;
+      border-radius: 20px 20px 20px 0px;
+      margin-bottom: 40px;
+      &::before {
+        bottom: -32px;
+        width: 32px;
+        height: 32px;
+        clip-path: polygon(0 0, 0 100%, 100% 0);
+      }
+      p.testimonial-caption {
+        font-size: 24px;
+      }
+      .rating {
+        svg {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+    .profile-card {
+      margin-top: 4px;
+      img {
+        width: 70px;
+        height: 70px;
+        margin-right: 18px;
+      }
+      h1.name {
+        font-size: 28px;
+      }
+      p.job {
+        font-size: 24px;
+      }
+    }
+  }
+}

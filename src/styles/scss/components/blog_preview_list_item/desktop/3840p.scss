@@ -1,0 +1,26 @@
+@media screen and (min-width: 3800px) {
+  .blog-preview-list-item {
+    padding: 400px 48px 48px 48px;
+    h1.title {
+      font-size: 66px;
+    }
+    p.description {
+      font-size: 48px;
+      margin-top: 22px;
+    }
+    .flex {
+      display: flex;
+      flex-direction: row;
+      margin-top: 22px;
+
+      .comment,
+      .like {
+        font-size: 48px;
+        svg {
+          width: 48px;
+          height: 48px;
+        }
+      }
+    }
+  }
+}

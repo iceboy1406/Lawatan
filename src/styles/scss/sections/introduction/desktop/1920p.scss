@@ -8,6 +8,9 @@
       &::after {
         bottom: -175px;
       }
+      &::before {
+        top: 115px;
+      }
       .image {
         flex-basis: 50%;
         img {

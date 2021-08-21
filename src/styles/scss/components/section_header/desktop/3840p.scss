@@ -1,0 +1,24 @@
+@media screen and (min-width: 3550px) {
+  .section-header {
+    padding: 16px $padding-x-3840p;
+    p.caption-label {
+      font-size: 56px;
+      .icons {
+        svg {
+          height: 60px;
+          height: 56px;
+        }
+      }
+    }
+    h1.caption-heading {
+      font-size: 115px;
+    }
+    p.caption-paragraph {
+      font-size: 56px;
+    }
+    .see-more-button {
+      font-size: 56px;
+      padding: 40px 95px;
+    }
+  }
+}

@@ -90,37 +90,9 @@
         width: 40%;
         height: 100%;
       }
-      .util-list {
-        display: none;
-        align-items: flex-start;
-        flex-direction: column;
-        a.navigation-button {
-          text-decoration: none;
-          padding: 11px 24px;
-          border-radius: 10px;
-          background: linear-gradient(
-            152deg,
-            $light-gray -26%,
-            $light-blue 142%
-          );
-          font-size: 18px;
-          font-weight: 600;
-          color: $nav-link;
-          display: block;
-          transition: 0.3s;
-          &.icon {
-            display: flex;
-            align-items: center;
-            padding: 11px 15px;
-            svg {
-              height: 27px;
-            }
-          }
-          &:hover {
-            transform: scale(1.075);
-          }
-        }
-      }
+    }
+    .util-list {
+      display: none;
     }
   }
 }

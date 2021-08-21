@@ -1,0 +1,44 @@
+@media screen and (min-width: 3000px) {
+  #introduction {
+    padding: 0px $padding-x-3000p;
+    padding-bottom: 215px;
+
+    .masking {
+      padding: 0px 30px 110px 30px;
+      &::after {
+        bottom: -210px;
+        width: 800px;
+        height: 800px;
+      }
+      &::before {
+        top: 170px;
+        width: 800px;
+        height: 800px;
+      }
+      .image {
+        flex-basis: 50%;
+        img {
+          width: 100%;
+        }
+      }
+      .caption {
+        padding-bottom: 180px;
+        p.caption-label {
+          font-size: 40px;
+        }
+        h1.caption-heading {
+          font-size: 115px;
+        }
+        p.caption-paragraph {
+          font-size: 36px;
+        }
+        button.caption-button {
+          padding: 24px 56px;
+          border-radius: 12px;
+          margin-top: 40px;
+          font-size: 36px;
+        }
+      }
+    }
+  }
+}
