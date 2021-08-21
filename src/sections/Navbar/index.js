@@ -12,15 +12,30 @@ function Navbar() {
   }, []);
 
   const touchMoveHandler = () => {
-    document.body.addEventListener("touchmove", (touchMoveEvent) => {
-      if (
-        touchMoveEvent.changedTouches[0].clientX <= 50 &&
-        touchMoveEvent.changedTouches[0].clientX >= 0
-      ) {
-        document.querySelector("nav").classList.remove("scrolled");
-        document.body.style = "height: 100vh; overflow: hidden";
-        setIsShowSidebar(true);
-      }
+    window.addEventListener("touchstart", (touchStartEvent) => {
+      window.addEventListener("touchend", (touchEndEvent) => {
+        window.addEventListener("touchmove", (touchMoveEvent) => {
+          if (
+            touchMoveEvent.changedTouches[0].clientX <= 50 &&
+            touchMoveEvent.changedTouches[0].clientX >= 0 &&
+            touchStartEvent.changedTouches[0].clientX <=
+              touchEndEvent.changedTouches[0].clientX &&
+            touchEndEvent.changedTouches[0].clientX -
+              touchStartEvent.changedTouches[0].clientX >=
+              10
+          ) {
+            document.querySelector("nav").classList.remove("scrolled");
+            document.body.style = "height: 100vh; overflow: hidden";
+            setIsShowSidebar(true);
+            console.log(
+              touchMoveEvent.changedTouches[0].clientX,
+              touchStartEvent.changedTouches[0].clientX,
+              touchEndEvent.changedTouches[0].clientX,
+              touchEndEvent.changedTouches[0]
+            );
+          }
+        });
+      });
     });
   };
   const scrolledNav = () => {
